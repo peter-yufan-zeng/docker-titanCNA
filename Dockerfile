@@ -24,5 +24,4 @@ WORKDIR /
 
 RUN rm -rf hmmcopy_utils
 
-RUN R -q -e 'install.packages(c("devtools"), repos="https://cran.r-project.org")'
-RUN R -q -e 'devtools::install_github("gavinha/TitanCNA")'
+RUN R -q -e 'BiocManager::install("TitanCNA")'
